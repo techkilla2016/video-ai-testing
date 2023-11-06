@@ -1,0 +1,247 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.videoReander {
+    width: 512px;
+    height: 512px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Loader */
+.Loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.alai-main {
+    width: 100%;
+    min-height: 100vh;
+    background: url('./assets/bg.svg') repeat;
+}
+
+.alai-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #373b4a8d;
+    background: rgba(20, 25, 44, 0.79);
+}
+
+/* Header */
+.alai-header {
+    width: 100%;
+    height: 80px;
+    background: #373b4a62;
+}
+
+.sp-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    height: 100%;
+}
+
+.sp-btn {
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+    margin: 0px 5px;
+}
+
+.sp-btn span {
+    font-size: 17px;
+    padding-left: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sp-btn:hover {
+    color: #fff;
+    backdrop-filter: blur(100px) saturate(2);
+    background: #cccccc33;
+}
+
+.sp-section {
+    min-height: 80vh;
+    width: 100%;
+}
+
+.sp-section input[type="file"] {
+    display: none;
+}
+
+.sp-section label {
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+    border: 2px dashed #ddd;
+    border-radius: 20px;
+    color: rgba(221, 221, 221, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 100px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sp-section label span {
+    font-size: 20px;
+}
+
+.sp-section label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sp-section .swap-btn {
+    background: #ffdc73;
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 30px;
+    border-radius: 18px;
+}
+
+.sp-section .swap-btn:active {
+    background: #ffdc73;
+    color: #000;
+}
+
+.sp-selected {
+    width: 100%;
+    height: 100%;
+}
+
+.sp-selected img {
+    width: 100%;
+    height: 100%;
+}
+
+.sp-get-face {
+    width: 100%;
+    height: 580px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sp-face-section {
+    height: 440px;
+    width: 100%;
+    overflow: auto;
+    padding: 0px 10px;
+}
+
+.sp-face-section::-webkit-scrollbar {
+    width: 18px;
+}
+
+.sp-face-section::-webkit-scrollbar-thumb {
+    width: 18px;
+    border-radius: 18px;
+    background: #0000007e;
+    border: #fff 6px solid;
+}
+
+.sp-face-list {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    margin: 15px 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    justify-medieta: space-between;
+    padding: 0px 20px;
+}
+
+.sp-face {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.sp-face img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.sp-face-arrow {
+    font-size: 50px;
+    color: #9f9ea0;
+    padding-bottom: 10px;
+}
+
+.sp-select-face {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sp-select-face .face-grid {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    display: grid;
+    z-index: 100;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 12px;
+    background: #fff;
+    right: 0px;
+    border-radius: 10px;
+    top: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sp-submit {
+    height: 80px;
+}
+
+.sp-result {
+    width: 100%;
+}
+
+.sp-result img {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .sp-nav {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .videoReander {
+        width: 300;
+        height: 300px;
+    }
+}
