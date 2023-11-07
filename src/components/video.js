@@ -8,6 +8,7 @@ import Loader from './loader';
 const VideoSection = () => {
     const [videoBase64, setVideoBase64] = useState(``);
     const [isLoad, setIsLoad] = useState(false)
+    const [videoUrl, setVideoUrl] = useState('')
     useEffect(() => {
         if (videoBase64) {
             const videoElement = document.getElementById('videoPreview');
@@ -27,9 +28,32 @@ const VideoSection = () => {
         const formData = new FormData()
         formData.append('file', videoBase64)
         try {
-            const res = await axios.post('https://8635-103-17-110-127.ngrok.io/video', formData)
-            setVideoAI(res.data)
+            const res = await axios.post('https://5f28-103-17-110-127.ngrok.io/video', formData)
+            console.log(res)
             setIsLoad(false)
+            // const blob = new Blob([res?.data], { type: 'video/mp4' });
+            // const url = URL.createObjectURL(blob);
+
+            // const newObjectUrl = URL.createObjectURL(res?.data);
+            // console.log(newObjectUrl)
+            const a = document.createElement('a');
+            a.style.display = 'none';
+
+            // Assuming res.data is the binary data of the video
+            const blob = new Blob([res.data], { type: 'video/mp4' });
+            const url = window.URL.createObjectURL(blob);
+
+            a.href = url;
+            a.download = 'video.mp4';
+
+            document.body.appendChild(a);
+            a.click();
+
+            // Cleanup
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            // const data = await res.data.arrayBuffer();
+            // setVideoUrl(data)
         } catch (error) {
             setIsLoad(false)
             console.log(error)
@@ -53,9 +77,15 @@ const VideoSection = () => {
                         <BiArrowFromLeft />
                     </button>
                 </div>
-                <video controls autoPlay loop >
-                    <source src={videoAI} type="video/mp4" />
-                </video>
+                <div id="videoCOt">
+                    {
+                        console.log(videoUrl)
+                    }
+                    <video width="320" height="240" controls>
+                        <source src={videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </Row>
         </>
     );
