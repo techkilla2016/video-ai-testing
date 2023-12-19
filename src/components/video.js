@@ -95,7 +95,6 @@ const VideoSection = ({ state }) => {
                 {
                     <VideoResult
                         show={modalShow}
-                        onHide={() => setModalShow(false)}
                         baseVideoData={videoUrl}
                     />
                 }
