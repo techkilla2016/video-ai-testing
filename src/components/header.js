@@ -8,9 +8,9 @@ const Header = () => {
         <div className="alai-header d-flex justify-content-between align-items-center">
             <Container fluid className='d-flex justify-content-between align-items-center'>
                 <div className="sp-logo d-flex align-items-center">
-                    SnapMagic
+                    AI Video Booth
                 </div>
-                <div className="sp-nav d-flex">
+                {/* <div className="sp-nav d-flex">
                     <a href="/" className='btn sp-btn'>
                         <FiGift />
                         <span>Demo Content</span>
@@ -23,7 +23,7 @@ const Header = () => {
                         <AiOutlinePlus />
                         <span>Add new photo</span>
                     </a>
-                </div>
+                </div> */}
             </Container>
         </div>
     )

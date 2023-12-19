@@ -1,0 +1,419 @@
+.desktop {
+    display: flex !important;
+}
+
+@media screen and (max-width: 992px) {
+    .desktop {
+        display: none !important;
+    }
+}
+
+.mobile {
+    display: none !important;
+}
+
+@media screen and (max-width: 992px) {
+    .mobile {
+        display: flex !important;
+    }
+}
+
+.pe-col {
+    cursor: pointer;
+}
+
+.form {
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    background: #fff;
+    width: 400px;
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        width: 90%;
+        padding: 20px 20px;
+    }
+}
+
+.form-fields {
+    border: 1px solid #ddd d;
+    border-radius: 8px;
+    margin: 10px 0px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-fields label {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    background: #198cde;
+    display: flex;
+    height: 100%;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.form-fields input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.submit-btn {
+    width: 50%;
+}
+
+.Loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0px;
+    left: 0px;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.alai-main {
+    width: 100%;
+    min-height: 100vh;
+    background: url('./assets/background.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.alai-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.alai-header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    left: 0px;
+    padding: 10px 0px;
+    background: linear-gradient(90deg, #fff, #fff, transparent, transparent, transparent);
+    backdrop-filter: blur(1px);
+}
+
+.sp-logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #666;
+    height: 100%;
+}
+
+.sp-btn {
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+    margin: 0px 5px;
+}
+
+.sp-btn span {
+    font-size: 17px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.sp-btn:hover {
+    color: #fff;
+    backdrop-filter: blur(100px) saturate(2);
+    background: #ccc 33;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.home {
+    padding: 70px 0px;
+}
+
+.home-temp {
+    padding: 100px 0px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.home-temp button {
+    margin: 0px 10px;
+}
+
+
+.sp-section {
+    min-height: 90vh;
+    width: 100%;
+}
+
+.sp-section input[type="file"] {
+    display: none;
+}
+
+.sp-section label {
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+    border: 2px dashed #ddd;
+    border-radius: 20px;
+    color: rgba(221, 221, 221, 1.0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 100px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sp-section label span {
+    font-size: 20px;
+}
+
+.sp-section label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.swap-btn {
+    background: #ffdc73 !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    padding: 10px 30px !important;
+    border-radius: 18px !important;
+}
+
+.swap-btn-cuccess {
+    background: #198754 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    padding: 10px 30px !important;
+    border-radius: 18px !important;
+}
+
+.swap-btn:active {
+    background: #ffdc73 !important;
+    color: #000;
+}
+
+.sp-selected {
+    width: 100%;
+    height: 100%;
+}
+
+.sp-selected img {
+    width: 100%;
+    height: 100%;
+}
+
+.sp-get-face {
+    width: 100%;
+    height: 580px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sp-get-face .sp-face-section {
+    height: 440px;
+    width: 100%;
+    overflow: auto;
+    padding: 0px 10px;
+}
+
+.sp-get-face .sp-face-section::-webkit-scrollbar {
+    width: 18px;
+}
+
+.sp-get-face .sp-face-section::-webkit-scrollbar-thumb {
+    width: 18px;
+    border-radius: 18px;
+    background: #000 7e;
+    border: #fff 6px solid;
+}
+
+.sp-get-face .sp-face-list {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    margin: 15px 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.sp-get-face .sp-face {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.sp-get-face .sp-face img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.sp-get-face .sp-face-arrow {
+    font-size: 50px;
+    color: #9f9ea0;
+    padding-bottom: 10px;
+}
+
+.sp-get-face .sp-select-face {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sp-get-face .sp-select-face .face-grid {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    display: grid;
+    z-index: 100;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 12px;
+    background: #fff;
+    right: 0px;
+    border-radius: 10px;
+    top: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sp-get-face .sp-submit {
+    height: 80px;
+}
+
+.sp-get-face .sp-result {
+    width: 100%;
+}
+
+.sp-get-face .sp-result img {
+    width: 100%;
+    height: auto;
+}
+
+.sp-get-face .sp-result img svg {
+    vertical-align: middle;
+    height: auto !important;
+}
+
+.capture {
+    min-width: 100%;
+}
+
+.capture video,
+.capture img {
+    border: 3px dashed #6f6f6e;
+    min-width: 100%;
+    border-radius: 15px;
+}
+
+.start-btn-section {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.sp-result img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.finalImag {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.code {
+    padding: 10px 40px;
+    border-radius: 20px;
+    background: #000;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .code {
+        font-size: 40px;
+    }
+}
+
+.thanks {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .thanks {
+        font-size: 40px;
+    }
+}
+
+.back-home {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    font-size: 60px;
+    cursor: pointer;
+    background: #fafafa;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .back-home {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+        right: 50px;
+        bottom: 40px;
+    }
+}
+
+button.disable {
+    cursor: no-drop;
+}
